@@ -1,6 +1,6 @@
 # GitHub Proxy API
 
-Aplikacja proxy do GitHub API, napisana w **Java 25 + Spring Boot 4.0.1 + Gradle-Kotlin**.  
+Aplikacja proxy do GitHub API, napisana w **Java 25 + Spring Boot 4.0.1**.  
 Umożliwia pobranie wszystkich repozytoriów użytkownika, które **nie są forkami**, oraz listę jego branchy i SHA ostatniego commita.
 
 ---
