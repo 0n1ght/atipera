@@ -1,15 +1,15 @@
 # GitHub Proxy API
 
-Aplikacja proxy do GitHub API, napisana w **Java 25 + Spring Boot 4.0.1**.  
-Umożliwia pobranie wszystkich repozytoriów użytkownika, które **nie są forkami**, oraz listę jego branchy i SHA ostatniego commita.
+A proxy application for the GitHub API, built with **Java 25 + Spring Boot 4.0.1**.
+It allows fetching all user repositories that **are not forks**, along with their branches and the SHA of the latest commit.
 
 ---
 
-## Funkcjonalności
+## Features
 
-- Pobranie listy repozytoriów użytkownika GitHub, które nie są forkami
-- Dla każdego repozytorium: jego nazwa, login właściciela oraz lista branchy (nazwa brancha i SHA ostatniego commita)
-- Obsługa nieistniejącego użytkownika → zwraca error:
+* Fetch a list of GitHub user repositories that are not forks
+* For each repository: repository name, owner login, and a list of branches (branch name and latest commit SHA)
+* Handles non-existing users → returns an error:
 
 ```json
 {
@@ -17,14 +17,17 @@ Umożliwia pobranie wszystkich repozytoriów użytkownika, które **nie są fork
   "message": "user <username> not found"
 }
 ```
-## Przykład użycia
-Endpoint:
-<br>
-`GET localhost:8080/{username}`
-<br>
-(`username`- nazwa użytkownika)
 
-Odpowiedź:
+## Usage Example
+
+Endpoint:
+
+`GET localhost:8080/{username}`
+
+where `{username}` is the GitHub username.
+
+Response:
+
 ```json
 [
   {
